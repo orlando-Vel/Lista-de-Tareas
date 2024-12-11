@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fafafb;
+  --purple: #956bda;
+  --blue-light: #00d9ff;
+  --blue-dark: #14b4ff;
+  --green: #69ff7d;
+  --black: #332d2d;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+  height: 100vh;
+  background-attachment: fixed;
+  font-family: "Lora", serif;
+}
+
+.container {
+  max-width: 80%;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.perfil h1 {
+  color: var(--white);
+}
+
+.perfil span {
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+#fecha {
+  color: var(--white);
+  padding: 50px 0 5px 0;
+}
+
+.agregar-tarea {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 70px;
+}
+
+.agregar-tarea input {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white);
+}
+
+.agregar-tarea i {
+  font-size: 35px;
+  color: var(--purple);
+}
+
+.agregar-tarea i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.agregar-tarea input::placeholder {
+  font-size: 1.1rem;
+  color: var(--purple);
+}
+
+.seccion-tarea h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+  display: flex;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.seccion-tarea i {
+  font-size: 22px;
+  color: var(--purple);
+}
+
+.seccion-tarea i:hover {
+  color: var(--black);
+  cursor: pointer;
+}
+
+.seccion-tarea > ul p {
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: var(--blue-dark);
+}

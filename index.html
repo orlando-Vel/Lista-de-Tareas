@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d7e5f5c3b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Lista de Tareas</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="perfil">
+        <div id="fecha"></div>
+        <h1>Hola ___</h1>
+        <span> Esta es la lista de tareas </span>
+      </div>
+      <div class="agregar-tarea">
+        <input type="text" id="input" placeholder="Agregar tarea" />
+        <i id="btnAgregar" class="fa fa-plus-circle"></i>
+      </div>
+      <div class="seccion-tarea">
+        <h3>Tareas pendientes</h3>
+        <ul id="lista"></ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
