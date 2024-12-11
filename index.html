@@ -17,21 +17,25 @@
     <title>Lista de Tareas</title>
   </head>
   <body>
-    <div class="container">
-      <div class="perfil">
-        <div id="fecha"></div>
-        <h1>Hola ___</h1>
-        <span> Esta es la lista de tareas </span>
+    <main>
+      <div class="container">
+        <div class="perfil">
+          <div id="fecha"></div>
+          <h1>
+            Hola, <input type="text" id="nombreUsuario" placeholder=" Luffy" />
+          </h1>
+          <span> Esta es la lista de tareas </span>
+        </div>
+        <div class="agregar-tarea">
+          <input type="text" id="input" placeholder="Agregar tarea" />
+          <i id="btnAgregar" class="fa fa-plus-circle"></i>
+        </div>
+        <div class="seccion-tarea">
+          <h3>Tareas pendientes</h3>
+          <ul id="lista"></ul>
+        </div>
       </div>
-      <div class="agregar-tarea">
-        <input type="text" id="input" placeholder="Agregar tarea" />
-        <i id="btnAgregar" class="fa fa-plus-circle"></i>
-      </div>
-      <div class="seccion-tarea">
-        <h3>Tareas pendientes</h3>
-        <ul id="lista"></ul>
-      </div>
-    </div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

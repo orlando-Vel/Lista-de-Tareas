@@ -11,6 +11,7 @@
   --blue-dark: #14b4ff;
   --green: #69ff7d;
   --black: #332d2d;
+  --blue-light2: #00ffea;
 }
 
 html {
@@ -33,6 +34,8 @@ body {
 }
 
 .perfil h1 {
+  display: flex;
+  margin: 0 auto;
   color: var(--white);
 }
 
@@ -62,6 +65,23 @@ body {
   border-radius: 8px;
   border: none;
   background-color: var(--white);
+}
+
+#nombreUsuario {
+  width: 50%;
+  background-color: transparent;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 28px;
+  border: none;
+  border-radius: 12px;
+  color: var(--blue-light);
+  margin: 2px;
+  padding-left: 4px;
+}
+
+#nombreUsuario:focus {
+  outline: none;
 }
 
 .agregar-tarea i {

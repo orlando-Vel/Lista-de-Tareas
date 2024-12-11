@@ -5,6 +5,7 @@ const btnAgregar = document.querySelector("#btnAgregar");
 const check = "fa-check-circle";
 const uncheck = "fa-circle";
 const lineThrough = "line-through";
+const nombreUsuario = document.querySelector("#nombreUsuario");
 
 let id;
 let LIST;
@@ -118,4 +119,53 @@ function cargarLista(DATA) {
   DATA.forEach(function (i) {
     agregarTarea(i.nombre, i.id, i.terminado, i.eliminado);
   });
+}
+
+//guardar el nombre del usuario
+let inputNombre = localStorage.getItem("nombreUsuario");
+if (inputNombre) {
+  nombreUsuario.value = inputNombre;
+} else {
+  nombreUsuario.value = "Luffy";
+}
+nombreUsuario.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    localStorage.setItem("nombreUsuario", nombreUsuario.value);
+    confirmacion("Nombre Guardado");
+    nombreUsuario.blur();
+  }
+});
+
+function confirmacion(mensaje) {
+  const confirmacion = document.createElement("div");
+  const notificacion = document.createElement("div");
+  notificacion.textContent = mensaje;
+  notificacion.style.position = "fixed";
+  notificacion.style.top = "50%";
+  notificacion.style.left = "50%";
+  notificacion.style.transform = "translate(-50%, -50%)";
+  notificacion.style.backgroundColor = "var(--blue-dark)";
+  notificacion.style.color = "var(--black)";
+  notificacion.style.padding = "10px 20px";
+  notificacion.style.borderRadius = "5px";
+  notificacion.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+  notificacion.style.zIndex = "1000";
+  notificacion.style.opacity = "0";
+  notificacion.style.transition = "opacity 0.3s";
+
+  // Agregar el elemento al body
+  document.body.appendChild(notificacion);
+
+  // Hacer visible la notificación
+  setTimeout(() => {
+    notificacion.style.opacity = "1";
+  }, 100);
+
+  // Remover la notificación después de x segundos
+  setTimeout(() => {
+    notificacion.style.opacity = "0";
+    setTimeout(() => {
+      notificacion.remove();
+    }, 300);
+  }, 1500);
 }
