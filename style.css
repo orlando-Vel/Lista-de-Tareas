@@ -7,8 +7,8 @@
 :root {
   --white: #fafafb;
   --purple: #956bda;
-  --blue-light: #00d9ff;
-  --blue-dark: #14b4ff;
+  --blue-light: #49e4ff;
+  --blue-dark: #009ee7;
   --green: #69ff7d;
   --black: #332d2d;
   --blue-light2: #00ffea;
@@ -19,10 +19,24 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+  background: linear-gradient(300deg, deepskyblue, #e73dff);
+  background-size: 120% 120%;
+  animation: gradient-animation 8s ease infinite;
   height: 100vh;
   background-attachment: fixed;
   font-family: "Lora", serif;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {

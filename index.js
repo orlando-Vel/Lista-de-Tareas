@@ -136,6 +136,11 @@ nombreUsuario.addEventListener("keyup", function (event) {
   }
 });
 
+nombreUsuario.addEventListener("blur", function () {
+  localStorage.setItem("nombreUsuario", nombreUsuario.value);
+  confirmacion("Nombre Guardado");
+});
+
 function confirmacion(mensaje) {
   const confirmacion = document.createElement("div");
   const notificacion = document.createElement("div");
